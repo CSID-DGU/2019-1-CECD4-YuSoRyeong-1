@@ -71,8 +71,11 @@ public class NavigationActivity extends AppCompatActivity {
 
         arSurface = (FrameLayout) findViewById(R.id.arSurface);
 
-        mapView = ((MainActivity)MainActivity.mContext).tMapview;
+       // mapView = ((MainActivity)MainActivity.mContext).tMapview;
 
+        mapView = new TMapView(this);
+
+        mapView.setSKTMapApiKey("246832e5-4982-4b19-b626-d9a0c89de007");
 
         //토글버튼 클릭
         arSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -108,10 +111,14 @@ public class NavigationActivity extends AppCompatActivity {
 
                 String locationProvider = LocationManager.GPS_PROVIDER;
                 Location location = lm.getLastKnownLocation(locationProvider);
-
-                longitude = location.getLongitude();
-                latitude = location.getLatitude();
-
+                if(location == null) {
+                    longitude = 0.0;
+                    latitude = 0.0;
+                }
+                else {
+                    longitude = location.getLongitude();
+                    latitude = location.getLatitude();
+                }
 
                 Log.d("location : ", latitude + ", longitude : " + longitude);
 

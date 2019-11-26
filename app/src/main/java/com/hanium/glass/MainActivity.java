@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        tMapview.setSKTMapApiKey("");
+        tMapview.setSKTMapApiKey("246832e5-4982-4b19-b626-d9a0c89de007");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

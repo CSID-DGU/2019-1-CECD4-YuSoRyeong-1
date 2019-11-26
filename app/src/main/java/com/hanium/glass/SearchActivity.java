@@ -3,16 +3,19 @@ package com.hanium.glass;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.skt.Tmap.TMapData;
@@ -36,7 +39,24 @@ public class SearchActivity extends AppCompatActivity {
 
         keywordView = (EditText) findViewById(R.id.edit_keyword);
         listView = (ListView) findViewById(R.id.listView);
-        mAdapter = new ArrayAdapter<POI>(this, android.R.layout.simple_list_item_1);
+        mAdapter = new ArrayAdapter<POI>(this, android.R.layout.simple_list_item_1){
+            @Override
+
+            public View getView(int position, View convertView, ViewGroup parent)
+
+            {
+
+                View view = super.getView(position, convertView, parent);
+
+                TextView tv = (TextView) view.findViewById(android.R.id.text1);
+
+                tv.setTextColor(Color.WHITE);
+
+                return view;
+
+            }
+
+        };
         listView.setAdapter(mAdapter);
         mapView = ((MainActivity)MainActivity.mContext).tMapview;
 

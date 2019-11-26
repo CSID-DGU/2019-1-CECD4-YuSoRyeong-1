@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_slider_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/info_bar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/naviinfo"
+            android:layout_width="match_parent"
+            android:layout_height="73sp"
+            app:srcCompat="@drawable/naviinfo"
+            />
     <LinearLayout
         android:id="@+id/search_bar"
         android:orientation="horizontal"
@@ -16,6 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/edit_keyword"
+            android:textColor="@color/white"
             android:layout_weight="1" />
 
         <Button
@@ -24,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="Search"
             android:id="@+id/btn_search" />
-
+    </LinearLayout>
 
     </LinearLayout>
 
@@ -37,7 +52,8 @@
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="113sp"
+            android:textColor="@color/white"
             android:isScrollContainer="true" />
     </FrameLayout>
 

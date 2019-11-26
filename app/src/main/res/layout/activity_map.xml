@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_slider_screen"
-    android:gravity="center"
-    android:orientation="vertical"
     android:weightSum="1"
     tools:context="com.hanium.glass.MapActivity">
 
@@ -17,4 +15,11 @@
         app:srcCompat="@drawable/seoul"
         />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/recoinfo"
+        android:layout_width="300sp"
+        android:layout_height="73sp"
+        android:layout_marginLeft="0dp"
+        app:srcCompat="@drawable/recoinfo" />
+
+</FrameLayout>
