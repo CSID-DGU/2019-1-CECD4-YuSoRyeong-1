@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_slider_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility= "visible">
+
+        <TextView
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:fontFamily="@font/gyeonggititle_medium"
+            android:textColor="@color/purple"
+            android:text="선택 위치"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/NowLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Location"
+            android:padding="20dp"
+            android:fontFamily="@font/gyeonggititle_medium"
+            android:text="종로구 중구 용산구"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+
+
+        <ImageView
+            android:layout_width="850sp"
+            android:layout_height="400sp"
+            android:layout_below="@id/Location"
+            android:layout_marginLeft="150sp"
+            android:layout_marginTop="60sp"
+            app:srcCompat="@drawable/rectangle"
+            />
+
+        <ImageView
+            android:id="@+id/RecommendLocation"
+            android:layout_width="199sp"
+            android:layout_height="73sp"
+            android:layout_below="@id/Location"
+            android:layout_marginLeft="515dp"
+            android:layout_marginTop="20sp"
+            android:background="@color/bg_slider_screen"
+            app:srcCompat="@drawable/best"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/RecommendLocation">
+
+            <TextView
+                android:id="@+id/place3name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place3"
+                android:layout_marginLeft="800sp"
+                android:layout_marginTop="30sp"
+                android:fontFamily="@font/gyeonggititle_medium"
+                android:text="덕수궁"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/place2name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place2"
+                android:layout_marginLeft="520sp"
+                android:layout_marginTop="30sp"
+                android:fontFamily="@font/gyeonggititle_medium"
+                android:textColor="@color/white"
+                android:text="만선호프"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/place1"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="190sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/i_nseoultower"
+                android:scaleType="centerCrop"
+                android:text="N서울타워"
+                android:textColor="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/place2"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="470sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/i_fullshiphof"
+                android:scaleType="centerCrop"
+                android:text="만선호프"
+                android:textColor="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/place3"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="740sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/deoksugung"
+                android:scaleType="centerCrop"
+                android:text="덕수궁"
+                android:textColor="#00FFFFFF" />
+
+            <TextView
+                android:id="@+id/place1name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place1"
+                android:layout_marginLeft="220sp"
+                android:layout_marginTop="30sp"
+                android:fontFamily="@font/gyeonggititle_medium"
+                android:textColor="@color/white"
+                android:text="N 서울타워"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+
+        <Button
+            android:id="@+id/searchRootButton"
+            android:layout_width="160dp"
+            android:layout_height="62dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimary"
+            android:text="길찾기"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="850sp"
+            android:layout_height="400sp"
+            android:layout_below="@id/searchRootButton"
+            android:layout_marginLeft="150sp"
+            android:layout_marginTop="10sp"
+            app:srcCompat="@drawable/rectangle"
+            />
+
+
+        <ImageView
+            android:id="@+id/detailImage"
+            android:layout_width="230sp"
+            android:layout_height="230sp"
+            android:layout_marginLeft="300sp"
+            android:layout_marginTop="120sp"
+            app:srcCompat="@drawable/n_seoultower" />
+
+        <TextView
+            android:id="@+id/detailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="120sp"
+            android:layout_toRightOf="@id/detailImage"
+            android:padding="10dp"
+            android:text="N서울타워"
+            android:textSize="50dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gyeonggititle_medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detailLocation"
+            android:layout_width="450sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailName"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="30sp"
+            android:layout_toRightOf="@id/detailImage"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:text="서울틀벽시"
+            android:fontFamily="@font/gyeonggititle_medium"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/detailTel"
+            android:layout_width="450sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailLocation"
+            android:layout_marginLeft="20sp"
+            android:layout_toRightOf="@id/detailImage"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gyeonggititle_medium"
+            android:text="010-0000-0000"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/detailContent"
+            android:layout_width="700sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailImage"
+            android:layout_marginLeft="300sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/white"
+            android:padding="20dp"
+            android:fontFamily="@font/gyeonggititle_medium"
+            android:text="안녕하세요"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

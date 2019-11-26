@@ -1,26 +1,19 @@
 package com.hanium.glass;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.skt.Tmap.TMapAddressInfo;
 import com.skt.Tmap.TMapData;
 import com.skt.Tmap.TMapPOIItem;
 import com.skt.Tmap.TMapView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -51,7 +44,7 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommand);
+        setContentView(R.layout.activity_recommend);
         mapView = ((MainActivity)MainActivity.mContext).tMapview;
         place1DetailButton = (Button)findViewById(R.id.place1);
         place2DetailButton = (Button)findViewById(R.id.place2);
@@ -128,8 +121,8 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
                     }
                 });
 
-                if(strData.equals("N서울타워")) detailImage.setImageResource(R.drawable.n_seoultower);
-                else if (strData.equals("만선호프")) detailImage.setImageResource(R.drawable.fullshiphof);
+                if(strData.equals("N서울타워")) detailImage.setImageResource(R.drawable.i_nseoultower);
+                else if (strData.equals("만선호프")) detailImage.setImageResource(R.drawable.i_fullshiphof);
                 else if  (strData.equals("덕수궁")) detailImage.setImageResource(R.drawable.deoksugung);
 
                 detailLayout.setVisibility(View.VISIBLE);

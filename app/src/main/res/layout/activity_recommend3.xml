@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="내 위치"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/NowLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Location"
+            android:padding="20dp"
+            android:text="서울 중구 필동 2가"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/RecommandLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Location"
+            android:layout_marginLeft="100dp"
+            android:padding="15dp"
+            android:text="중구 BEST 3"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/RecommandLocation">
+
+            <TextView
+                android:id="@+id/place3name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place3"
+                android:layout_marginLeft="700sp"
+                android:layout_marginTop="30sp"
+                android:text="덕수궁"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/place2name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place2"
+                android:layout_marginLeft="430sp"
+                android:layout_marginTop="30sp"
+                android:text="만선호프"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/place1"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="100sp"
+                android:layout_marginTop="90sp"
+                android:background="@drawable/n_seoultower"
+                android:scaleType="centerCrop"
+                android:text="N서울타워"
+                android:textColor="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/place2"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="380sp"
+                android:layout_marginTop="90sp"
+                android:background="@drawable/fullshiphof"
+                android:scaleType="centerCrop"
+                android:text="만선호프"
+                android:textColor="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/place3"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="650sp"
+                android:layout_marginTop="90sp"
+                android:background="@drawable/deoksugung"
+                android:scaleType="centerCrop"
+                android:text="덕수궁"
+                android:textColor="#00FFFFFF" />
+
+            <TextView
+                android:id="@+id/place1name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place1"
+                android:layout_marginLeft="130sp"
+                android:layout_marginTop="30sp"
+                android:text="N 서울타워"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/searchRootButton"
+            android:layout_width="160dp"
+            android:layout_height="62dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimary"
+            android:text="길찾기"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/detailImage"
+            android:layout_width="230sp"
+            android:layout_height="230sp"
+            android:layout_marginLeft="120sp"
+            android:layout_marginTop="120sp"
+            app:srcCompat="@drawable/n_seoultower" />
+
+        <TextView
+            android:id="@+id/detailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="120sp"
+            android:layout_toRightOf="@id/detailImage"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detailLocation"
+            android:layout_width="450sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailName"
+            android:layout_marginLeft="20sp"
+            android:layout_toRightOf="@id/detailImage"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/detailTel"
+            android:layout_width="450sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailLocation"
+            android:layout_marginLeft="20sp"
+            android:layout_toRightOf="@id/detailImage"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/detailTime"
+            android:layout_width="450sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailTel"
+            android:layout_marginLeft="20sp"
+            android:layout_toRightOf="@id/detailImage"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/detailContent"
+            android:layout_width="700sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailImage"
+            android:layout_marginLeft="120sp"
+            android:layout_marginTop="50sp"
+            android:padding="20dp"
+            android:text=""
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
