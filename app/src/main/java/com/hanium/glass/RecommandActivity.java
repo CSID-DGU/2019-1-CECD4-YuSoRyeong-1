@@ -3,6 +3,7 @@ package com.hanium.glass;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -69,6 +70,7 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
         address=(TextView)findViewById(R.id.detailLocation);
         telNo = (TextView)findViewById(R.id.detailTel);
         detail = (TextView)findViewById(R.id.detailContent);
+        detail.setMovementMethod(new ScrollingMovementMethod());
         detailImage = (ImageView)findViewById(R.id.detailImage);
 
         detailLayout = (RelativeLayout)findViewById(R.id.detailLayout);
@@ -117,7 +119,7 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
                                     name.setText(poi.getPOIName());
                                     address.setText(poi.getPOIAddress().replace("null", ""));
                                     telNo.setText(poi.telNo);
-                                    if(detail.getText().equals("")) detail.setText(poi.desc);
+                                    detail.setText(poi.desc);
 
                                     end_lat = poi.getPOIPoint().getLatitude();
                                     end_lon = poi.getPOIPoint().getLongitude();

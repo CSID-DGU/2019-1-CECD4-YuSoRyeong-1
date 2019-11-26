@@ -218,13 +218,14 @@
         <TextView
             android:id="@+id/detailContent"
             android:layout_width="700sp"
-            android:layout_height="wrap_content"
+            android:layout_height="115sp"
             android:layout_below="@id/detailImage"
             android:layout_marginLeft="200sp"
             android:textColor="@color/white"
             android:padding="20dp"
             android:fontFamily="@font/gyeonggititle_medium"
-            android:text="안녕하세요"
+            android:scrollbars= "vertical"
+            android:text="상세정보가 존재하지 않습니다"
             android:textSize="20sp" />
 
     </RelativeLayout>
