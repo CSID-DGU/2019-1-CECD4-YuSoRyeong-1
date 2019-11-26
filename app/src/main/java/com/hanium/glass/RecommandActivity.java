@@ -138,6 +138,24 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
                 else if  (strData.equals("수유아띠랑스")) detailImage.setImageResource(R.drawable.i_attirance);
                 else if  (strData.equals("닭한마리공릉본점")) detailImage.setImageResource(R.drawable.i_dakhanmari);
                 else if  (strData.equals("둘리뮤지엄")) detailImage.setImageResource(R.drawable.i_doolri);
+                else if (strData.equals("뚝섬한강공원")) detailImage.setImageResource(R.drawable.i_ddooksum);
+                else if  (strData.equals("대도식당 본점")) detailImage.setImageResource(R.drawable.i_daedo);
+                else if  (strData.equals("서울숲")) detailImage.setImageResource(R.drawable.i_seoulforest);
+                else if  (strData.equals("만푸쿠")) detailImage.setImageResource(R.drawable.i_manfuku);
+                else if  (strData.equals("롯데월드")) detailImage.setImageResource(R.drawable.i_lotteworld);
+                else if (strData.equals("석촌호수")) detailImage.setImageResource(R.drawable.i_seokchonlake);
+                else if  (strData.equals("강남역")) detailImage.setImageResource(R.drawable.i_gangnamstation);
+                else if  (strData.equals("가로수길")) detailImage.setImageResource(R.drawable.i_garosugil);
+                else if  (strData.equals("세빛섬")) detailImage.setImageResource(R.drawable.i_threelight);
+                else if  (strData.equals("보라매공원")) detailImage.setImageResource(R.drawable.i_boramae);
+                else if (strData.equals("노량진수산시장")) detailImage.setImageResource(R.drawable.i_noryangjin);
+                else if  (strData.equals("샤로수길")) detailImage.setImageResource(R.drawable.i_shyarosu);
+                else if  (strData.equals("여의도한강공원")) detailImage.setImageResource(R.drawable.i_yeouido);
+                else if  (strData.equals("여의도진주집")) detailImage.setImageResource(R.drawable.i_jinjuhouse);
+                else if  (strData.equals("63빌딩")) detailImage.setImageResource(R.drawable.i_63building);
+                else if  (strData.equals("하늘공원")) detailImage.setImageResource(R.drawable.i_skypark);
+                else if  (strData.equals("경의선숲길")) detailImage.setImageResource(R.drawable.i_yeontralpark);
+                else if  (strData.equals("커피가게동경")) detailImage.setImageResource(R.drawable.i_cafedongkyeong);
 
                 detailLayout.setVisibility(View.VISIBLE);
                 recommandLayout.setVisibility(View.INVISIBLE);
