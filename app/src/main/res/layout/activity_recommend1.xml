@@ -63,63 +63,6 @@
             android:layout_below="@id/RecommendLocation">
 
             <TextView
-                android:id="@+id/place3name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/place3"
-                android:layout_marginLeft="800sp"
-                android:layout_marginTop="30sp"
-                android:fontFamily="@font/gyeonggititle_medium"
-                android:text="덕수궁"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/place2name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/place2"
-                android:layout_marginLeft="520sp"
-                android:layout_marginTop="30sp"
-                android:fontFamily="@font/gyeonggititle_medium"
-                android:textColor="@color/white"
-                android:text="만선호프"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/place1"
-                android:layout_width="200sp"
-                android:layout_height="200sp"
-                android:layout_marginLeft="190sp"
-                android:layout_marginTop="60sp"
-                android:background="@drawable/i_nseoultower"
-                android:scaleType="centerCrop"
-                android:text="N서울타워"
-                android:textColor="#00FFFFFF" />
-
-            <Button
-                android:id="@+id/place2"
-                android:layout_width="200sp"
-                android:layout_height="200sp"
-                android:layout_marginLeft="470sp"
-                android:layout_marginTop="60sp"
-                android:background="@drawable/i_fullshiphof"
-                android:scaleType="centerCrop"
-                android:text="만선호프"
-                android:textColor="#00FFFFFF" />
-
-            <Button
-                android:id="@+id/place3"
-                android:layout_width="200sp"
-                android:layout_height="200sp"
-                android:layout_marginLeft="740sp"
-                android:layout_marginTop="60sp"
-                android:background="@drawable/deoksugung"
-                android:scaleType="centerCrop"
-                android:text="덕수궁"
-                android:textColor="#00FFFFFF" />
-
-            <TextView
                 android:id="@+id/place1name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -128,8 +71,67 @@
                 android:layout_marginTop="30sp"
                 android:fontFamily="@font/gyeonggititle_medium"
                 android:textColor="@color/white"
-                android:text="N 서울타워"
+                android:text="둘리뮤지엄"
                 android:textSize="30sp" />
+
+
+            <TextView
+                android:id="@+id/place2name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place2"
+                android:layout_marginLeft="470sp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/gyeonggititle_medium"
+                android:text="닭한마리공릉본점"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/place3name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place3"
+                android:layout_marginLeft="760sp"
+                android:layout_marginTop="30sp"
+                android:fontFamily="@font/gyeonggititle_medium"
+                android:text="아띠랑스카페"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+
+            <Button
+                android:id="@+id/place1"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="190sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/i_doolri"
+                android:scaleType="centerCrop"
+                android:text="둘리뮤지엄"
+                android:textColor="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/place2"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="470sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/i_dakhanmari"
+                android:scaleType="centerCrop"
+                android:text="닭한마리공릉본점"
+                android:textColor="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/place3"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginLeft="740sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/i_attirance"
+                android:scaleType="centerCrop"
+                android:text="수유아띠랑스"
+                android:textColor="#00FFFFFF" />
 
         </RelativeLayout>
 
@@ -168,7 +170,7 @@
             android:id="@+id/detailImage"
             android:layout_width="230sp"
             android:layout_height="230sp"
-            android:layout_marginLeft="300sp"
+            android:layout_marginLeft="200sp"
             android:layout_marginTop="120sp"
             app:srcCompat="@drawable/n_seoultower" />
 
@@ -219,12 +221,11 @@
             android:layout_width="700sp"
             android:layout_height="wrap_content"
             android:layout_below="@id/detailImage"
-            android:layout_marginLeft="300sp"
-            android:layout_marginTop="20sp"
+            android:layout_marginLeft="200sp"
             android:textColor="@color/white"
             android:padding="20dp"
             android:fontFamily="@font/gyeonggititle_medium"
-            android:text="안녕하세요"
+            android:text="상세정보가 존재하지 않습니다"
             android:textSize="20sp" />
 
     </RelativeLayout>

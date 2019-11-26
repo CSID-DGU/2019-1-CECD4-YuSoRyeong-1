@@ -44,7 +44,20 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommend);
+        intent = getIntent();
+        int gu = intent.getExtras().getInt("gu");
+
+        Log.d("구이름",gu + "");
+        switch (gu){
+            case 0: { setContentView(R.layout.activity_recommend); break;}
+            case 1:  {setContentView(R.layout.activity_recommend1); break;}
+            case 2:  {setContentView(R.layout.activity_recommend2); break;}
+            case 3:  {setContentView(R.layout.activity_recommend3); break;}
+            case 4:  {setContentView(R.layout.activity_recommend4); break;}
+            case 5:  {setContentView(R.layout.activity_recommend5); break;}
+            case 6:  {setContentView(R.layout.activity_recommend6); break;}
+            case 7:  {setContentView(R.layout.activity_recommend7); break;}
+        }
         mapView = ((MainActivity)MainActivity.mContext).tMapview;
         place1DetailButton = (Button)findViewById(R.id.place1);
         place2DetailButton = (Button)findViewById(R.id.place2);
@@ -67,9 +80,7 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
 
         startNavi.setOnClickListener(this);
 
-        intent = getIntent();
-        final int gu = intent.getExtras().getInt("gu");
-        Log.d("구이름",gu + "");
+
     }
 
     @Override
@@ -106,7 +117,7 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
                                     name.setText(poi.getPOIName());
                                     address.setText(poi.getPOIAddress().replace("null", ""));
                                     telNo.setText(poi.telNo);
-                                    detail.setText(poi.desc);
+                                    if(detail.getText().equals("")) detail.setText(poi.desc);
 
                                     end_lat = poi.getPOIPoint().getLatitude();
                                     end_lon = poi.getPOIPoint().getLongitude();
@@ -124,6 +135,9 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
                 if(strData.equals("N서울타워")) detailImage.setImageResource(R.drawable.i_nseoultower);
                 else if (strData.equals("만선호프")) detailImage.setImageResource(R.drawable.i_fullshiphof);
                 else if  (strData.equals("덕수궁")) detailImage.setImageResource(R.drawable.deoksugung);
+                else if  (strData.equals("수유아띠랑스")) detailImage.setImageResource(R.drawable.i_attirance);
+                else if  (strData.equals("닭한마리공릉본점")) detailImage.setImageResource(R.drawable.i_dakhanmari);
+                else if  (strData.equals("둘리뮤지엄")) detailImage.setImageResource(R.drawable.i_doolri);
 
                 detailLayout.setVisibility(View.VISIBLE);
                 recommandLayout.setVisibility(View.INVISIBLE);
