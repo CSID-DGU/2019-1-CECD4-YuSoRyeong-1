@@ -61,6 +61,7 @@ public class NavigationActivity extends AppCompatActivity {
     TMapView mapView;
     Intent intent;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +76,9 @@ public class NavigationActivity extends AppCompatActivity {
 
         mapView = new TMapView(this);
 
-        mapView.setSKTMapApiKey("246832e5-4982-4b19-b626-d9a0c89de007");
+        mapView.setSKTMapApiKey("");
+
+
 
         //토글버튼 클릭
         arSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -111,9 +114,12 @@ public class NavigationActivity extends AppCompatActivity {
 
                 String locationProvider = LocationManager.GPS_PROVIDER;
                 Location location = lm.getLastKnownLocation(locationProvider);
+
+               // TMapPoint location = tmapgps.getLocation();
+
                 if(location == null) {
-                    longitude = 0.0;
-                    latitude = 0.0;
+                    longitude = 126.998922;
+                    latitude = 37.558555;
                 }
                 else {
                     longitude = location.getLongitude();
@@ -202,9 +208,9 @@ public class NavigationActivity extends AppCompatActivity {
                                     if (nodeListPlacemarkItem.item(23).getNodeName().equals("tmap:turnType")) {
                                         Log.d("turnType", nodeListPlacemarkItem.item(23).getTextContent().trim());
                                         direction = nodeListPlacemarkItem.item(23).getTextContent().trim();
-                                        if (direction.equals("11")) renderer.setAngleZ(0f);
+                                        if (direction.equals("11")) renderer.setAngleZ(90f);
                                         else if (direction.equals("12"))
-                                            renderer.setAngleZ(90f);//좌회전
+                                            renderer.setAngleZ(0f);//좌회전
                                         else if (direction.equals("13")) renderer.setAngleZ(-90f);
                                         else if (direction.equals("14")) renderer.setAngleZ(180f);
                                         else if (direction.equals("16")) renderer.setAngleZ(120f);
